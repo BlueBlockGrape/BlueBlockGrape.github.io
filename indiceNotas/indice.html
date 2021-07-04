@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de Estudio</title>
+    <link rel="stylesheet" href="styleIndice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <section class="container">
+            <div class="logo">
+              <a href="#inicio">@Mis_Notas</a>
+            </div>
+            <button class="menu-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+              </svg>
+              <svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
+              </svg>
+            </button>
+            <nav class="menu">
+              <a href="#inicio">Inicio</a>
+              <a href="#acerca">Acerca</a>
+              <a href="#indice">Indice</a>
+              <a href="#en_proceso">Nuevos</a>
+            </nav>
+        </section>
+    </header>
+    <section id="inicio" class="home">
+        <article class="hero-image" style="--hero-image: url('../assets/proyecto_notas_hero.jpg');
+            --hero-attachment: fixed;">
+            <aside class="hero-image-opacity" style="--hero-opacity-color: var(--black-alpha-color);">
+                <div class="hero-image-content">
+                    <h2 class="hero-image-title" style="--hero-text-color: var(--white-color);">
+                        Mis Notas
+                    </h2>
+                    <h4 class="hero-image-sub-title" style="--hero-text-color: var(--white-color);">
+                        Sobre Desarrollo Web y programación
+                    </h4>
+                </div>
+            </aside>
+        </article>
+    </section>
+    <section id="acerca" class="about section container full-lg-screen">
+        <article class="text-justify article-height">
+            <aside class="text-center">
+                <h2 class="">Acerca de las Notas</h2>
+            </aside>
+            <p>
+                Estas notas fueron desarrolladas con el fin de tener algunos ejemplos
+                básicos acerca de algunas tecnologias referentes al desarrollo web y de programación.
+            </p>
+            <p>
+                La información que se presenta en cada una de las secciones puede contener errores o estar desactualizada
+                pero se pretende estar corrigiendo errores y actualizando cada una de ellas en la mediada de lo posible.
+            </p>
+            <p>
+                El principal motivo de estas notas es tener referencia de alfunos códigos de manera rápida por si
+                se olvida algunas partes de la sintaxis, pero si se requiere mayor información recomendamos ir a los sitios oficiales
+                de cada una de ellas.
+            </p>
+        </article>
+        <article class="article-height">
+            <aside class="text-center">
+                <h2 class="">Notas Desarrolladas al momento</h2>
+            </aside>
+            <ul>
+                <li>MySQL</li>
+                <li>JSON</li>
+                <li>PHP</li>
+            </ul>
+        </article>
+    </section>
+    <section id="indice" class="index section container">
+        <h2 class="section-title">INDICE</h2>
+        <div class="container">
+            <div class="herramienta-card">
+                <img src="../assets/nota_cards/card_mysql.jpg">
+                <h3 class="title-class">MySQL</h3>
+                <p>Notas básicas sobre la creación de bases de datos, consultas y manejo de datos con MySQL</p>
+                <a href="mysql/mysql.html" class="btn-card">Ir a Notas</a>
+            </div>
+        </div>
+    </section>
+    <section id="en_proceso" class="in-progress section">
+        <h2 class="section-title">NOTAS EN PROCESO</h2>
+        <div class="container">
+            <div class="herramienta-card">
+                <img src="../assets/nota_cards/card_json.jpg">
+                <h3 class="title-class">JSON</h3>
+                <p>Notas básicas sobre lo que es JSON y en qué se utiliza, su estructura y los daos generales.</p>
+                <a href="mysql/mysql.html" class="btn-card">Ir a Notas</a>
+            </div>
+            <div class="herramienta-card">
+                <img src="../assets/nota_cards/card_php.jpg">
+                <h3 class="title-class">PHP</h3>
+                <p>Notas básicas sobre PHP conexiones con bases de datos y en general la creación de funciones y aspectos generales.</p>
+                <a href="mysql/mysql.html" class="btn-card">Ir a Notas</a>
+            </div>
+            <div class="herramienta-card">
+                <img src="../assets/nota_cards/card_c++.jpg">
+                <h3 class="title-class">C++</h3>
+                <p>Notas básicas sobre la creación de bases de datos, consultas y manejo de datos con MySQL</p>
+                <a href="mysql/mysql.html" class="btn-card">Ir a Notas</a>
+            </div>
+            <div class="herramienta-card">
+                <img src="../assets/nota_cards/card_java.jpg">
+                <h3 class="title-class">JAVA</h3>
+                <p>Notas básicas sobre la creación de bases de datos, consultas y manejo de datos con MySQL</p>
+                <a href="mysql/mysql.html" class="btn-card">Ir a Notas</a>
+            </div>
+            <div class="herramienta-card">
+                <img src="../assets/nota_cards/card_python.jpg">
+                <h3 class="title-class">PYTHON</h3>
+                <p>Notas básicas sobre la creación de bases de datos, consultas y manejo de datos con MySQL</p>
+                <a href="mysql/mysql.html" class="btn-card">Ir a Notas</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <small>Sitio diseñado por <a href="../index.html" rel="noopener">Aarón Castillo</a></small>
+    </footer>
+<script src="scriptIndice.js"></script>
+</body>
+</html>
