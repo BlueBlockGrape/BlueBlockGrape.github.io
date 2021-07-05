@@ -5,6 +5,7 @@
 	--temario-active: #86ddff;
 	--temario-active-border: #1d00a0;
     --font: "Fira Sans", sans-serif;
+    --console-font: 'Inconsolata', monospace;
 	--first-color: #075B87;
     --first-alpha-color: rgba(7, 91, 135, 0.75);
     --second-color: #1F0347;
@@ -96,23 +97,25 @@ p {
 
 .text-first-color{
     color: var(--first-color);
-  }
+}
   
-  .text-center {
+.text-center {
     text-align: center;
-  }
+}
   
-  .text-left{
+.text-left{
     text-align: left;
-  }
+}
   
-  .text-right{
+.text-right{
     text-align: right;
-  }
+}
 
-  .text-justify {
+.text-justify {
     text-align: justify;
-  }
+}
+
+
 
 /******** SITE STYLES ********/
 
@@ -139,6 +142,27 @@ p {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 30% auto;
+}
+
+.console-font{
+    font-family: var(--console-font);
+    background-color: var(--gray-light-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.console-font-with-note{
+  font-family: var(--console-font);
+  background-color: var(--gray-light-color);
+  margin-top: 1rem;
+}
+
+.p-bottom {
+    padding-bottom: 1rem;
+}
+
+.p-top {
+    padding-top: 1rem;
 }
 
 

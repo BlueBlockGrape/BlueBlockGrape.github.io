@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="hero-image">
@@ -22,8 +25,8 @@
                 </div>
 				<h3 class="">Contenido</h3>
 				<ul class="lista">
-					<li class="activo"><a href="#1">1. Primer Capítulo</a></li>
-					<li><a href="#2">2. Segundo Capítulo</a></li>
+					<li class="activo"><a href="#1">1. Introducción</a></li>
+					<li><a href="#2">2. Creación de BD y tablas</a></li>
 					<li><a href="#3">3. Tercer Capítulo</a></li>
 					<li><a href="#4">4. Cuarto Capítulo</a></li>
 					<li><a href="#5">5. Quinto Capítulo</a></li>
@@ -34,13 +37,43 @@
             <div>
                 <h1 class="text-center">Notas Sobre MySQL</h1>
             </div>
-			<div class="card" id="1">
-				<h2>1. Primer Capítulo</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam blanditiis sapiente, alias ut optio corrupti harum? Voluptatum obcaecati nobis perferendis similique aperiam impedit, qui ullam. Sint impedit aspernatur cumque.</p>
+			<div class="card text-justify" id="1">
+				<h2>Introducción</h2>
+				<br>
+				<p><i>MySQL</i> es un gestor de bases de datos relacional, 
+				   de código abierto que puede ser utilizada para almacenar datos en diferentes tablas einterconectarlos entre sí.<br>
+					<i>MySQL</i> tiene una arquitectura cliente servidor y pudes conectarte a ella a traves de diversas formas y lenguajes
+					de programación, su instalación es sencilla y al ser de código abierto pueden utilizarse muchas de sus funcionalidades.<br>
+					Un cliente especial que tiene es <i>Workbench</i> que sirve para administrar de forma visual las bases de datos y administrarlas,
+					también se puede acceder desde la consola del sistema operativo y realizar operaciones a traves de comandos.<br>
+					En estas notas nos sentraremos solo en algunas consultas que tiene para la creacion y manipulacion de datos entre otras cosas.
+				</p>
 			</div>
 			<div class="card" id="2">
-				<h2>2. Segundo Capítulo</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam blanditiis sapiente, alias ut optio corrupti harum? Voluptatum obcaecati nobis perferendis similique aperiam impedit, qui ullam. Sint impedit aspernatur cumque.</p>
+				<h2>Creación de una BD y tablas</h2>
+				<br>
+				<h3>Creación de una Base de Datos</h3>
+				<br>
+				<p>Para crear una base de datos podemos ejecutar el siguiente comando ya sea desde la consola del sistema operativo que se accede con el comando <i>mysql</i>
+				o desde el cliente de <i>Workbench</i>.</p>
+				<p class="console-font-with-note">CREATE SCHEMA 'escuela' DEFAULT CHARACTER utf8;</p>
+				<h6 class="p-bottom">Nota: Para estas notas nos intentaremos basar en una sola base de datos principalmente que será ejemplo de una escuela</h6>
+				<p>Para poder acceder a la base de datos que acabamos de crear podemos utilizar la siguiente consulta:<br></p>
+				<p class="console-font">USE escuela;</p>
+				<p>Si deseamos eliminar la base de datos lo podemos hacer con la siguiente consulta, pero debes de tomar en cuenta
+					que si eliminas la base de datos pertderas toda la información que contenga, por lo que se recomienda no eliminarla a menos 
+					que estes seguro de esto o que conozcas como hacer un respaldo primero.<br>
+				</p>
+				<p class="console-font">DROP DATABASE escuela;</p>
+					<br>
+					<br>
+				<h3>Creación de Tablas</h3>
+					<br>
+				<p>Hay mucha información que podemos poner sobre las tablas, pero sería demasiada para poderla explicar desde un principio,
+					pero por ahora solo nos centraremos en lo principal, una sola tabbla, que información contiene y los tipos de datos que puede guardar.<br>
+					Primero daremos algunos ejemplos de tablas simples y como llenarlas con información y por ahora dejaremos de lado la base de datos de la escuela y 
+					al final explicaremos como serían las tablas de la misma.
+				</p>
 			</div>
 			<div class="card" id="3">
 				<h2>3. Tercer Capítulo</h2>
