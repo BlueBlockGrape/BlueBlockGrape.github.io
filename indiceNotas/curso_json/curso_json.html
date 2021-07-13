@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_curso_json.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-image">
+        <h2>JSON</h2>
+    </div>
+    <div class="contenedor">
+		<aside>
+			<div class="contenedor-temario" id="temario">
+                <div class="volver-indice">
+                    <a href="../indice.html" class="btn-card">Voler al Índice</a>
+                </div>
+				<h3 class="">Contenido</h3>
+				<ul class="lista">
+					<li class="activo"><a href="#1">1. Introducción</a></li>
+					<li><a href="#2">2. Tipos de datos</a></li>
+					<li><a href="#3">3. Conversiones</a></li>
+					<li><a href="#4">4. Propiedades JS</a></li>
+                    <li><a href="#5">5. Objetos Literales</a></li>
+				</ul>
+			</div>
+		</aside>
+		<main class="contenido">
+            <div>
+                <h1 class="text-center">Notas Sobre JSON</h1>
+            </div>
+			<div class="card text-justify" id="1">
+				<h2>Introducción</h2>
+				<br>
+				<p><i>JSON</i> Es un formato de texto sencillo que se utiliza para el intercambio de datos, es parecido
+                    a la forma en que se crean objetos en <i>JavaScript</i>. Se usa en el envio de información y puede 
+                    ser utilizado para el envío de datos entre varios lenguajes de programacion.<br>
+                    Algunas caracteristicas son las siguientes:<br>
+                    <br>
+                    <div class="lista-container">
+                        <ul>
+                            <li>Es ligero usado comunmente para API, configuraciones o almacenamiento de datos.</li>
+                            <li>Es más liviano que <i>XML</i> y no usa etiquetas.</li>
+                            <li>Debe tener la extención .json en sus archivos (archivo.json).</li>
+                        </ul>
+                    </div>
+				</p>
+			</div>
+			<div class="card text-justify" id="2">
+				<h2>Tipos de Datos en JSON</h2>
+				<br>
+                <p>
+                    Como en los lenguajes de programación existen diferentes tipos de datos, igual en JSON existen 
+                    algunos de ellos, por lo que es importante conocerlos y conocer su estructura, para evitar que se generen errores.<br>
+                        <br>
+                    La siguiente tabla muestra los tipos de datos que son utilizados con <i>JSON</i> después se muestran algunas anotaciones
+                    importantes sobre algunos de ellos.
+                </p>
+                    <br>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Valores</th>
+                                <th>Ejemplos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>String</td>
+                                <td>"Texto"</td>
+                                <td>"hola mundo", "21", ""</td>
+                            </tr>
+                            <tr>
+                                <td>Number</td>
+                                <td>Numero</td>
+                                <td>2, 2.5, -15, 1.12</td>
+                            </tr>
+                            <tr>
+                                <td>Bolean</td>
+                                <td>Lógicos</td>
+                                <td>true, false</td>
+                            </tr>
+                            <tr>
+                                <td>Array</td>
+                                <td>[valor]</td>
+                                <td>["texto", 2012, true]</td>
+                            </tr>
+                            <tr>
+                                <td>Object</td>
+                                <td>{"clave":valor, ...}</td>
+                                <td>{"clave1", valor1, "clave2": valor2, ...}</td>
+                            </tr>
+                            <tr>
+                                <td>Null</td>
+                                <td>Nulo</td>
+                                <td>null</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    <br>
+                    <br>
+                <h4>Array</h4>
+                    <br>
+                <p>Cada valor introducido debe estar separado por una coma, excepto el últmimo valor, como se muestra en el siguiente ejemplo:</p>
+                    <br>
+                    <p class="console-font">
+                        [ <br>
+                            &nbsp;&nbsp;&nbsp;true, <br>
+                            &nbsp;&nbsp;&nbsp;12, <br>
+                            &nbsp;&nbsp;&nbsp;"hola", <br>
+                            &nbsp;&nbsp;&nbsp;{}, <br>
+                            &nbsp;&nbsp;&nbsp;null <br> 
+                        ]
+                    </p>
+                    <br>
+                <h4>Objeto</h4>
+                    <br>
+                <p>Contiene uno o varios elementos donde cada elemento se compone de la combinación "clave": valor.<br>
+                   La clave debe ir entre comillas dobles, cada elemento del objeto debe ir separado por una coma excepto el último elemento.<br>
+                   A continuación se muestra un ejemplo de un objeto:</p>
+                   <br>
+                   <pre class="console-font">
+{
+    "nombre": "Aaron",
+    "apellido": "Castillo",
+    "edad": 23,
+    "ubicacion": {
+        "ciudad": "ciudad",
+        "estado": "estado"
+    },
+    "programador": true,
+    "lenguages": ["C++", "JAVA", "C#"]
+}
+                   </pre>
+                   <br>
+                <h4>Fecha</h4>
+                    <br>
+                Dado que <i>JSON</i> no tiene directamente un tipo fecha (Date) tenemos que convertilo a tipo texto para que lo pueda aceptar.<br>
+                El siguiente es un ejemplo de como se transformaria un tipo fecha a texto en <i>JavaScript</i>:
+                    <br>
+                <p class="console-font">
+                    const fecha = NewDate();<br>
+                    const texto = fecha.toJSON();
+                </p>
+                    <br>
+                <p>Para convertir de texto a tipo fecha de nuevo se puede utilizar el siguiente código:</p>
+                    <br>
+                <p class="console-font">
+                    const fecha = Date.parse(texto);
+                </p>
+			</div>
+			<div class="card text-justify" id="3">
+				<h2>3. Coversiones JS JSON</h2>
+                <br>
+				<p><i>JSON</i> y <i>JavaScript</i> no son iguales, dado que la contrucción de objetos en <i>JavaScript</i> es similar a la estructura en <i>JSON</i>
+                   puede que algunas personas se confundan, por  lo que es importante poder distinguirlos, porque <i>JavaScript</i> tiene más tipos de datos 
+                   y se pueden hacer converciones entre ellos.<br>
+                Acontinuación se muestra un ejemplo de un objeto <i>JavaScript</i> y  un archivo <i>JSON</i>:</p>
+                    <br>
+                <p>archivo.js</p>
+                <pre class="console-font">
+{
+    nombre: "Aaron",
+    edad: 23,
+    vivo: true,
+    fecha_nac: (newDate()).toJSON()
+}
+                </pre>
+                    <br>
+                <p>archivo.json</p>
+                <pre class="console-font">
+{
+    "nombre": "Aaron",
+    "edad": 23,
+    "vivo": true,
+    "fecha_nac": "2000-01-01..."
+}
+                </pre>
+                    <br>
+                <p>Para convertir de <i>JSON</i> a <i>JavaScript</i> si los valores que tiene el <i>JSON</i>
+                   no son validos para <i>JavaScript</i> marcará error pero si el de <i>JavaScript</i> tiene funciones
+                   aún así se puede transformar a <i>JSON</i>.</p>
+                    <br>
+                <h4>STRINGIFY</h4>
+                    <br>
+                <p>JSON.stringify: sirve para cconvertir un objeto de <i>JavaScript</i> a texto <i>JSON</i>.<br>
+                   El siguiente código muestra un ejemplo de esto:</p>
+                    <br>
+                <pre class="console-font">
+const libro = {
+    genero: "comedia",
+    titulo: "la divina comedia xD"
+}
+const text = JSON.stringify(libro);
+
+console.log(text);
+
+/*   Imprimiría lo siguiente */
+
+//{"genero":"comedia","titulo":"la divina comedia xD"}
+                </pre>
+                    <br>
+                <p><strong>Replacer</strong>: Es el segundo parametro de la función stringify que permite filtrar propiedades.<br>
+                   ejemplo:</p>
+                    <br>
+                <pre class="console-font">
+const mascota = {
+    tipo: "perro",
+    raza: "chihuhua",
+    nombre: "taquillo"
+};
+const text = JSON.stringify(mascota, ['nombre']);
+
+console.log(text); //{"nombre": "taquillo"}
+                </pre>
+                    <br>
+                <p>También se pueden usar funciones como parametro:</p>
+                    <br>
+                <pre class="console-font">
+const filtrado = (clave, valor) => {
+    if(typeof valor === 'string' && valor === "taquillo"){
+        return valor;
+    }
+    return undefined;
+}
+
+const mascota = {
+    tipo: "perro",
+    raza: "chihuhua",
+    nombre: "taquillo"
+};
+
+const text = JSON.stringify(mascota, filtrado);
+                </pre>
+                    <br>
+                <p><strong>Format</strong>: Es el tercer parametro de la función stringify que permite formatear la conversión.<br>
+                   Ejemplo:</p>
+                    <br>
+                <pre class="console-font-with-note">
+const mascota = {
+    tipo: "perro",
+    raza: "chihuhua",
+    nombre: "taquillo"
+};
+
+const text = JSON.stringify(mascota, null, 3); //marca 3 espacios de formato
+
+console.log(text);
+
+/*
+{
+       "tipo": "perro",
+       "raza": "chihuhua",
+       "nombre": "taquillo"
+}
+                </pre>
+                <h6 class="p-bottom">Nota: Se puede poner algún texto o emoji en lugar del numero.</h6>
+                    <br>
+                    <p><strong>toJSON</strong>: es para transformar el objeto, es una función dentro del objeto que reconoce stringify.<br>
+                        Ejemplo:</p>
+                         <br>
+                     <pre class="console-font">
+     const mascota = {
+         tipo: "perro",
+         raza: "chihuhua",
+         nombre: "taquillo",
+         toJSON: function(){
+             return {
+                 completo: `${this.nombre} (${this.tipo} - ${this.raza})`
+             };
+         }
+     };
+     
+     const text = JSON.stringify(mascota);
+     
+     console.log(text); //{"completo":"taquillo (perro - chihuhua)"}
+                     </pre>
+                         <br>
+                <h4>PARSE</h4>
+                     <br>
+                <p>JSON.parse: sirve para convertir texto <i>JSON</i> a un objeto de <i>JavaScript</i>.<br>
+                   El siguiente código muestra un ejemplo de esto:</p>
+                    <br>
+                <pre class="console-font">
+const text = '{
+    genero: "ciencia",
+    titulo: "la ciencia"
+}';
+const libro = JSON.parse(text);
+
+/* En consola imprimiria un objeto  */
+                </pre>
+                    <br>
+                <p><strong>REVIVER</strong>: es para transformar valores, algo así como revivir un valor.<br>
+                   Ejemplo:</p>
+                    <br>
+                <pre class="console-font">
+const conversor = (clave, valor) => {
+    if(typeof valor !== 'string') {
+        return valor;
+    }
+    const isoDate = /*\d{4}-\d{2}T\d{2}:\d{2}.../; //una fecha
+    return isoDate.test(valor) ? new Date(valor) : valor;
+}
+
+const text = '{"esValido": true, "fecha":"2020-03-02..."}';
+
+const revivir = JSON.parse(text, conversor);
+
+//ISO-8601: YYYY-MM-DDTHH:mm:ss.sssZ
+                </pre>
+			</div>
+			<div class="card text-justify" id="4">
+				<h2>4. Propiedades</h2>
+                    <br>
+				<p>Para acceder a los valores de las propiedades de un objeto de <i>JavaScript</i> puede ser 
+                   a partir de dos maneras, como se muestra en los siguientes códigos.</p>
+                    <br>
+                <p>Notación</p>
+                <pre class="console-font">
+const persona = {
+    nombre: "Alfredo Ramirez",
+    edad: 45,
+    vivienda: {
+        direccion: "Avenida Calle #123",
+        ciudad: "Ninguna"
+    },
+    esCasado: true,
+    hijos: ["hijo1", "hijo2", "hijo3"]
+}
+
+console.log(`Nombre: ${persona.nombre}`);
+console.log(`Residencia: ${JSON.stringify(persona.vivienda)}`); //completo
+console.log(`Dirección: ${persona.vivienda.direccion}`);
+console.log(`Trabajador: ${persona.esEmpleado ? 'Sí' : 'No'}`);
+console.log(`Hijos: ${persona.hijos.join(', ')}`);
+                </pre>
+                    <br>
+                <p>Notación Alternativa. (Para acceder a propiedades)</p>
+                    <br>
+                <pre class="console-font">
+console.log(persona['nombre']);
+
+const propiedad = "nombre";
+console.log(propiedad[propiedad]);
+console.log(`Direccion: ${persona['vivienda'].direccion}`);
+console.log(`Ciudad: ${persona['vivienda']['ciudad']}`);
+console.log(`Trabajando: ${persona['esEmpleado'] ? 'Sí' : 'No'}`);
+                </pre>
+			</div>
+            <div class="card aling-justify" id="5">
+				<h2>5. Objetos Literales</h2>
+                    <br>
+				<p>En <i>JavaScript</i> se pueden crear objetos literales
+                   en los siguientes códigos se ven algunos ejemplos de la creación de objetos.</p>
+                    <br>
+                <pre class="console-font">
+const usuario = {};
+
+console.log(usuarios); //{}
+
+let usuario = 'equiman';
+usuarios['equiman'] = {};
+usuarios[usuario].tipo = 'Administrador';
+console.log(JSON.stringify(usuarios, null, 4));
+usuarios[usaurio].alerta = {};
+usuarios[usuario].alerta.tiempo = 30;
+usuarios[usuario].alerta.tipo = 'seg';
+
+usuario = 'equimacho';
+usuarios[usuario] = {tipo: 'Usuario'};  x
+
+//Asignar valores por defecto (Nueva Forma)
+
+const tiempo = usuarios[usuario]?.alerta?.tiempo || 0;
+
+//Vieja forma
+
+const tiempo = (usuarios
+    && usuarios[usuario] && usuarios[usuario].alerta &&
+    usuarios[usuario].alerta.tiempo) || 0;
+
+    //x  const alerta = {tiempo: 60, tipo: 'seg'};
+    usuarios[usuario].alerta = alerta;  
+    /*la primera 'alerta' se refiere a la propiedad del objeto
+     y la segunda se refiere a la constante*/
+                </pre>
+                    <br>
+                <p>También una vez creada la constante se puede meter desde que se crea
+                   el objeto, si le ponemos solo la variable toma como nombre de dicha
+                   variable y le asigna el valor que tenga.
+                </p>
+                    <br>
+                <p class="console-font">
+                    usuarios[usuario] = {tipo: 'Usuario', alerta};
+                </p>
+                    <br>
+                <p>La notación con [] es para cuando la propiedad o valor
+                   lleva espacios y si podemos una variable dentro de
+                   los [] tenemos que asegurarnos que sí hacer referencía
+                   a nuestro objeto, con la notación de puntos se evita esto
+                   pero hay problemas si contienen espacio.
+                </p>
+                <pre class="console-font">
+const espacios = ['Andres Ruiz','fuego arena'];
+const especial = {[espacio[0]]:{},[espacios[1]]:{}};
+console.log(JSON.stringify(especial, null, 4));
+/*
+    {
+        "Andrez Ruiz": {},
+        "fuego arena": {}
+    }
+*/
+                </pre>
+                    <br>
+                <h4>SWITCH</h4>
+                    <br>
+                <p>Tradicional</p>
+                <pre class="console-font">
+const buscar = (valor) => {
+    let resultado = '';
+    switch(valor) {
+        case 1:
+            resultado = "Uno";
+            break;
+        case 2:
+            resultado = "Dos";
+            break;
+        case 3:
+            resultado = "Tres";
+            break;
+        default:
+            resultado = "Cero";
+            break;
+    }
+    return resultado;
+};
+                </pre>
+                    <br>
+                <p>Directo</p>
+                    <br>
+                <pre class="console-font">
+const numeros = {
+    1: 'uno',
+    2: 'dos',
+    3: 'tres'
+};
+
+const buscar = (valor) => {
+    return numeros[valor] || 'cero';
+}
+
+console.log(buscar(1));
+                </pre>
+                    <br>
+                <h4>Funciones en objetos literales</h4>
+                    <br>
+                <p>Se pueden introducir funciones dentro de un objeto y mandarlo llamar.</p>
+                    <br>
+                <pre class="console-font">
+const pagina = {    // (1)
+    alIniciar: function() {
+        console.log('Se ha iniciado el ciclo de vida');
+    },
+    alFinalizar: funcion() {
+        console.log('Se ha finalizado el ciclo de vida');
+    },
+}:
+
+let evento = 'alIniciar';
+pagina.alIniciar();
+pagina[evento]();
+
+const metodo = (evento) => evento && pagina[evento]();
+
+metodo(evento);
+                </pre>
+                    <br>
+                <p>(1) Se puede evitar la aplabra function desde la version
+                   Ema Script 6 y utilizar directamente funciones flecha y el último
+                   elemento si puede llevar coma.
+                </p>
+                    <br>
+                <pre class="console-font">
+const pagina = {
+    alIniciar: () => console.log('Inicio'),
+    alFinalizar: () => console.log('AlFin')
+};
+                </pre>
+                    <br>
+                <h4>Método EVAL == EVIL</h4>
+                    <br>
+                <p>Puede ser peligroso si un hacker modifica la variable</p>
+                    <br>
+                <pre class="console-font">
+function imprimir(){
+    console.log('Estoy Imprimiendo');
+}
+
+const metodo = 'imprimir';
+eval(metodo + '();');
+
+//Hacker metiendo código
+
+const metodo = 'console.log('Hack'); imprimir';
+
+/* Sería mejor utilizar window que solo ejecuta sí lo encuentra */
+
+function imprimir(){
+    ...
+}
+const metodo = ...;
+
+window[metodo]();
+                </pre>
+			</div>
+		</main>
+	</div>
+<script src="script_curso_json.js"></script>
+</body>
+</html>
